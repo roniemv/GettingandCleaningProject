@@ -1,3 +1,13 @@
+#Data Cleaning Process
+
+##First, the data was read from the different files (X_train.txt, Y_train.txt,Subject_train.txt,X_test.txt,Y_test.txt,Subject_test.txt) and merged in a single data table. 
+##Then another file called "features.txt" which contains the variables names, was used to get the column numbers of the labels that content the word "mean" or "std" in uppercase or lowercase. These positions were used to subset the data table.
+##In order to do this subset, it was included two extra positions (Subject and Y columns merged in the data table).
+##Later, another file called "activity_labels.txt", which contains the 6 different activities expresed in text, was used to replace the column Y with the text version of the activities. The function merged was used with the parameter sort=FALSE, so that the data will stay in the same order.
+##After that, the labels of the data table were changed into a descriptive variable names. The file features.txt used previosly had the original variable names but ,before they were assigned as the names of the data table, the characters "-" and "()" were removed and the two extra columns labels were added "Subject" and "Activity"
+##Finally, the data was grouped by Subject and Activity and summarised with the mean parameter and created a file called "tidydata.txt"
+
+#Variables
 
 |Position|Column Name|Description|
 |--------|-----------|-----------|
